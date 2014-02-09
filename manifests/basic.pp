@@ -60,6 +60,9 @@ class site::basic {
       password_min_age  => '0',
       shell             => '/usr/bin/zsh',
     }
+    class{ 'puppet_vim_env':
+      $homedir	=> '/home/bainos',
+    }
 
   }
 }

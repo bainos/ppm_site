@@ -45,19 +45,6 @@ class site::basic {
     #
     # === Users
     #
-    user { 'root':
-      ensure            => 'present',
-      comment           => 'root',
-      gid               => '0',
-      home              => '/root',
-      managehome        => true,
-      password          => '$6$Y3TGSeWe$KfGijIwB0cguKhOuY.jGRizqOOILyHfu8mqyVgkT8KGhS5/h8N7S7MSMU5iDhyhEJaNV1u9gNyugUc4LQAN3L1',
-      password_max_age  => '99999',
-      password_min_age  => '0',
-      shell             => '/usr/bin/zsh',
-      uid               => '0',
-    }
-
     group { 'bainos':
       ensure  => present,
       gid     => '39000',
@@ -69,7 +56,6 @@ class site::basic {
       groups            => ['sudo'],
       home              => '/home/bainos',
       managehome        => true,
-      password          => '$6$2LYJPfoD$QBDHrCTI1mC762V4GfFDA.U5kWZ9sya1p.I0ej0yQa5dokSPjKkZu671YJlt.8Ny46ToxLZ6STgh7S1vt/JxA0',
       password_max_age  => '99999',
       password_min_age  => '0',
       shell             => '/usr/bin/zsh',

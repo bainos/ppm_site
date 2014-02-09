@@ -60,6 +60,9 @@ class site::basic {
       shell             => '/usr/bin/zsh',
     }
     class{ 'puppet_vim_env':
+      homedir => '/root',
+    }
+    class{ 'puppet_vim_env':
       homedir => '/home/bainos',
     }
 

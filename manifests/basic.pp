@@ -24,7 +24,6 @@ class site::basic {
     # === Puppet Forge
     #
     include motd
-    include puppet_vim_env
     # Include and setup locales
     class{ 'locales':
       default_value  => 'en_US.UTF-8',
@@ -61,7 +60,7 @@ class site::basic {
       shell             => '/usr/bin/zsh',
     }
     class{ 'puppet_vim_env':
-      $homedir	=> '/home/bainos',
+      homedir => '/home/bainos',
     }
 
   }
